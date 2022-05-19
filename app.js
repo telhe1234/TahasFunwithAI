@@ -1,5 +1,3 @@
-// require("dotenv").config();
-
 const form = document.querySelector("#promptForm");
 const container = document.querySelector("#container");
 form.addEventListener("submit", function (e) {
@@ -21,11 +19,11 @@ const addPromptResultToResponses = (prompt) => {
   $("#container").prepend($promptResult);
   // document.body.insertBefore(newDiv, container);
 };
-const escape = function (str) {
-  let div = document.createElement("div");
-  div.appendChild(document.createTextNode(str));
-  return div.innerHTML;
-};
+// const escape = function (str) {
+//   let div = document.createElement("div");
+//   div.appendChild(document.createTextNode(str));
+//   return div.innerHTML;
+// };
 
 const createPromptElement = (promptResult) => {
   const $promptRes = $(`
@@ -57,7 +55,7 @@ const fetchPromptResponse = async () => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${"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"}`,
+      Authorization: `Bearer ${window.process.env.OPENAI_SECRET}`,
     },
     body: JSON.stringify(data),
   })
@@ -66,5 +64,6 @@ const fetchPromptResponse = async () => {
       console.log(data.choices[0].text);
       addPromptResultToResponses(data.choices[0].text);
       form.elements.prompt.value = "";
-    });
+    })
+    .catch((err) => JSON.stingify(err));
 };
