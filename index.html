@@ -6,16 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fun with AI</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
   <h1>Fun with AI</h1>
-  <form action="">
+  <form id="promptForm">
     <p>Enter prompt</p>
-    <textarea id="story" name="story" rows="5" cols="33"></textarea>
+    <textarea id="prompt" name="prompt" rows="5" cols="33"></textarea>
     <button>Submit</button>
     <h2>Responses</h2>
-    <div class="container"></div>
+    <sectiom id="container"></sectiom>
   </form>
   <script src="app.js"></script>
 </body>
