@@ -99,6 +99,5 @@ const fetchPromptResponse = async () => {
 // Save responses if the user leaves or reloads the page/on load of page
 $(window).on("load", function () {
   let promptResults = JSON.parse(localStorage.getItem("promptResultsList"));
-  console.log(promptResults);
   renderPrompts(promptResults);
 });
