@@ -70,7 +70,7 @@ const fetchPromptResponse = async () => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${window.process.env.OPENAI_SECRET}`,
+      Authorization: `Bearer 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`,
     },
     body: JSON.stringify(data),
   })
