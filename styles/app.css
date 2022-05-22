@@ -1,0 +1,37 @@
+.prompt-result-container {
+  background-color: #dce0e4;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#prompt-form {
+  position: relative;
+  display: inline-block;
+}
+
+#prompt-form span.namefortxtarea {
+  display: block;
+  text-align: left;
+}
+.prompt {
+  text-align: initial;
+  display: flex;
+}
+.prompt-show-result {
+  text-align: initial;
+  display: flex;
+}
+.prompt-span {
+  float: left;
+  margin-left: 3rem;
+}
+.prompt-result-span {
+  float: left;
+  margin-left: 2rem;
+}
+.prompt-label {
+  font-weight: 500;
+}
+.prompt-result-label {
+  font-weight: 500;
+}
