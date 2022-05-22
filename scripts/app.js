@@ -8,7 +8,7 @@ let promptKey = "";
 let prompt = form.elements.prompt.value || promptKey;
 let promptValue = "";
 
-// render prompts results on load of page(when page is refreshed)
+// render prompts results on load of page(when page is refreshed) or when tha page is closed
 const renderPrompts = (list) => {
   // loop over prompts list
   for (const prompt of list) {
