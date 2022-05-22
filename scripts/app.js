@@ -42,7 +42,7 @@ const escape = function (str) {
 
 const createPromptElement = (prompt, promptResult) => {
   const $promptRes = $(`
-    <article class="prompt-result-container rounded p-3 col-8 mx-auto">
+    <article class="prompt-result-container rounded p-3 col-sm-12 col-md-8 mx-auto">
       <header>
         <div class="prompt"><span class="prompt-label">Prompt: </span><span class="prompt-span">${escape(
           prompt
@@ -70,7 +70,7 @@ const fetchPromptResponse = async () => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer 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`,
+      Authorization: `Bearer ${window.process.OPENAI_SECRET}`,
     },
     body: JSON.stringify(data),
   })
